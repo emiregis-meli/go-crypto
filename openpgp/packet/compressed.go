@@ -56,7 +56,7 @@ func (c *Compressed) parse(r io.Reader) error {
 		c.Body = bzip2.NewReader(r)
 	default:
 		fmt.Printf("\n\033[1;34m%s%s\033[0m\n", "Modified: using ", "flate")
-		c.Body = bzip2.NewReader(r)
+		c.Body = r
 		//err = errors.UnsupportedError("unknown compression algorithm: " + strconv.Itoa(int(buf[0])))
 	}
 
