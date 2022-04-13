@@ -3,7 +3,7 @@
 // license that can be found in the LICENSE file.
 
 // Package openpgp implements high level operations on OpenPGP messages.
-package openpgp // import "github.com/ProtonMail/go-crypto/openpgp"
+package openpgp // import "github.com/emiregis-meli/go-crypto/openpgp"
 
 import (
 	"crypto"
@@ -12,9 +12,9 @@ import (
 	"io"
 	"strconv"
 
-	"github.com/ProtonMail/go-crypto/openpgp/armor"
-	"github.com/ProtonMail/go-crypto/openpgp/errors"
-	"github.com/ProtonMail/go-crypto/openpgp/packet"
+	"github.com/emiregis-meli/go-crypto/openpgp/armor"
+	"github.com/emiregis-meli/go-crypto/openpgp/errors"
+	"github.com/emiregis-meli/go-crypto/openpgp/packet"
 )
 
 // SignatureType is the armor type for a PGP signature.

@@ -7,8 +7,8 @@ package packet
 import (
 	"crypto"
 	"encoding/binary"
-	"github.com/ProtonMail/go-crypto/openpgp/errors"
-	"github.com/ProtonMail/go-crypto/openpgp/s2k"
+	"github.com/emiregis-meli/go-crypto/openpgp/errors"
+	"github.com/emiregis-meli/go-crypto/openpgp/s2k"
 	"io"
 	"strconv"
 )

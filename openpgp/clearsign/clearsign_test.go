@@ -6,9 +6,9 @@ package clearsign
 
 import (
 	"bytes"
-	"github.com/ProtonMail/go-crypto/openpgp"
-	"github.com/ProtonMail/go-crypto/openpgp/packet"
 	"fmt"
+	"github.com/emiregis-meli/go-crypto/openpgp"
+	"github.com/emiregis-meli/go-crypto/openpgp/packet"
 	"io"
 	"testing"
 )

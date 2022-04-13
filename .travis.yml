@@ -5,7 +5,7 @@ script:
   - go test ./... -run RandomizeFast -count=512
   - go test ./... -run RandomizeSlow -count=32
 
-go_import_path: github.com/ProtonMail/go-crypto
+go_import_path: github.com/emiregis-meli/go-crypto
 
 go:
   - 1.12.x

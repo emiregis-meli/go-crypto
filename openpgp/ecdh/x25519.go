@@ -11,8 +11,8 @@ import (
 	"io"
 	"math/big"
 
-	"github.com/ProtonMail/go-crypto/openpgp/aes/keywrap"
-	"github.com/ProtonMail/go-crypto/openpgp/internal/ecc"
+	"github.com/emiregis-meli/go-crypto/openpgp/aes/keywrap"
+	"github.com/emiregis-meli/go-crypto/openpgp/internal/ecc"
 	"golang.org/x/crypto/curve25519"
 )
 

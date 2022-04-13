@@ -21,12 +21,12 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/ProtonMail/go-crypto/openpgp/ecdh"
-	"github.com/ProtonMail/go-crypto/openpgp/elgamal"
-	"github.com/ProtonMail/go-crypto/openpgp/errors"
-	"github.com/ProtonMail/go-crypto/openpgp/internal/algorithm"
-	"github.com/ProtonMail/go-crypto/openpgp/internal/ecc"
-	"github.com/ProtonMail/go-crypto/openpgp/internal/encoding"
+	"github.com/emiregis-meli/go-crypto/openpgp/ecdh"
+	"github.com/emiregis-meli/go-crypto/openpgp/elgamal"
+	"github.com/emiregis-meli/go-crypto/openpgp/errors"
+	"github.com/emiregis-meli/go-crypto/openpgp/internal/algorithm"
+	"github.com/emiregis-meli/go-crypto/openpgp/internal/ecc"
+	"github.com/emiregis-meli/go-crypto/openpgp/internal/encoding"
 	"golang.org/x/crypto/ed25519"
 )
 

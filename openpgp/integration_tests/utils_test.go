@@ -8,9 +8,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ProtonMail/go-crypto/openpgp"
-	"github.com/ProtonMail/go-crypto/openpgp/armor"
-	"github.com/ProtonMail/go-crypto/openpgp/packet"
+	"github.com/emiregis-meli/go-crypto/openpgp"
+	"github.com/emiregis-meli/go-crypto/openpgp/armor"
+	"github.com/emiregis-meli/go-crypto/openpgp/packet"
 )
 
 // This function produces random test vectors: generates keys according to the
@@ -145,7 +145,7 @@ func randFileHints() *openpgp.FileHints {
 	return &openpgp.FileHints{
 		IsBinary: mathrand.Intn(2) == 0,
 		FileName: string(fileName),
-		ModTime: time.Now(),
+		ModTime:  time.Now(),
 	}
 }
 

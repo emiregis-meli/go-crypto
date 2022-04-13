@@ -4,7 +4,7 @@
 
 // Package packet implements parsing and serialization of OpenPGP packets, as
 // specified in RFC 4880.
-package packet // import "github.com/ProtonMail/go-crypto/openpgp/packet"
+package packet // import "github.com/emiregis-meli/go-crypto/openpgp/packet"
 
 import (
 	"bytes"
@@ -12,8 +12,8 @@ import (
 	"crypto/rsa"
 	"io"
 
-	"github.com/ProtonMail/go-crypto/openpgp/errors"
-	"github.com/ProtonMail/go-crypto/openpgp/internal/algorithm"
+	"github.com/emiregis-meli/go-crypto/openpgp/errors"
+	"github.com/emiregis-meli/go-crypto/openpgp/internal/algorithm"
 )
 
 // readFull is the same as io.ReadFull except that reading zero bytes returns
@@ -384,18 +384,18 @@ func Read(r io.Reader) (p Packet, err error) {
 type SignatureType uint8
 
 const (
-	SigTypeBinary            SignatureType = 0x00
-	SigTypeText                            = 0x01
-	SigTypeGenericCert                     = 0x10
-	SigTypePersonaCert                     = 0x11
-	SigTypeCasualCert                      = 0x12
-	SigTypePositiveCert                    = 0x13
-	SigTypeSubkeyBinding                   = 0x18
-	SigTypePrimaryKeyBinding               = 0x19
-	SigTypeDirectSignature                 = 0x1F
-	SigTypeKeyRevocation                   = 0x20
-	SigTypeSubkeyRevocation                = 0x28
-	SigTypeCertificationRevocation         = 0x30
+	SigTypeBinary                  SignatureType = 0x00
+	SigTypeText                                  = 0x01
+	SigTypeGenericCert                           = 0x10
+	SigTypePersonaCert                           = 0x11
+	SigTypeCasualCert                            = 0x12
+	SigTypePositiveCert                          = 0x13
+	SigTypeSubkeyBinding                         = 0x18
+	SigTypePrimaryKeyBinding                     = 0x19
+	SigTypeDirectSignature                       = 0x1F
+	SigTypeKeyRevocation                         = 0x20
+	SigTypeSubkeyRevocation                      = 0x28
+	SigTypeCertificationRevocation               = 0x30
 )
 
 // PublicKeyAlgorithm represents the different public key system specified for

@@ -12,10 +12,10 @@ import (
 	"io"
 	"math/big"
 
-	"github.com/ProtonMail/go-crypto/openpgp/ecdh"
-	"github.com/ProtonMail/go-crypto/openpgp/errors"
-	"github.com/ProtonMail/go-crypto/openpgp/internal/algorithm"
-	"github.com/ProtonMail/go-crypto/openpgp/packet"
+	"github.com/emiregis-meli/go-crypto/openpgp/ecdh"
+	"github.com/emiregis-meli/go-crypto/openpgp/errors"
+	"github.com/emiregis-meli/go-crypto/openpgp/internal/algorithm"
+	"github.com/emiregis-meli/go-crypto/openpgp/packet"
 	"golang.org/x/crypto/ed25519"
 )
 

@@ -9,7 +9,7 @@ import (
 	"compress/flate"
 	"compress/zlib"
 	"fmt"
-	"github.com/ProtonMail/go-crypto/openpgp/errors"
+	"github.com/emiregis-meli/go-crypto/openpgp/errors"
 	"io"
 	"strconv"
 )

@@ -9,9 +9,9 @@ import (
 	"io"
 	"time"
 
-	"github.com/ProtonMail/go-crypto/openpgp/armor"
-	"github.com/ProtonMail/go-crypto/openpgp/errors"
-	"github.com/ProtonMail/go-crypto/openpgp/packet"
+	"github.com/emiregis-meli/go-crypto/openpgp/armor"
+	"github.com/emiregis-meli/go-crypto/openpgp/errors"
+	"github.com/emiregis-meli/go-crypto/openpgp/packet"
 )
 
 // PublicKeyType is the armor type for a PGP public key.
@@ -87,15 +87,15 @@ func (e *Entity) PrimaryIdentity() *Identity {
 }
 
 func shouldPreferIdentity(existingId, potentialNewId *Identity) bool {
-	if (existingId == nil) {
+	if existingId == nil {
 		return true
 	}
 
-	if (len(existingId.Revocations) > len(potentialNewId.Revocations)) {
+	if len(existingId.Revocations) > len(potentialNewId.Revocations) {
 		return true
 	}
 
-	if (len(existingId.Revocations) < len(potentialNewId.Revocations)) {
+	if len(existingId.Revocations) < len(potentialNewId.Revocations) {
 		return false
 	}
 
@@ -103,13 +103,13 @@ func shouldPreferIdentity(existingId, potentialNewId *Identity) bool {
 		return true
 	}
 
-	if (existingId.SelfSignature.IsPrimaryId != nil && *existingId.SelfSignature.IsPrimaryId &&
-		!(potentialNewId.SelfSignature.IsPrimaryId != nil && *potentialNewId.SelfSignature.IsPrimaryId)) {
+	if existingId.SelfSignature.IsPrimaryId != nil && *existingId.SelfSignature.IsPrimaryId &&
+		!(potentialNewId.SelfSignature.IsPrimaryId != nil && *potentialNewId.SelfSignature.IsPrimaryId) {
 		return false
 	}
 
-	if (!(existingId.SelfSignature.IsPrimaryId != nil && *existingId.SelfSignature.IsPrimaryId) &&
-		potentialNewId.SelfSignature.IsPrimaryId != nil && *potentialNewId.SelfSignature.IsPrimaryId) {
+	if !(existingId.SelfSignature.IsPrimaryId != nil && *existingId.SelfSignature.IsPrimaryId) &&
+		potentialNewId.SelfSignature.IsPrimaryId != nil && *potentialNewId.SelfSignature.IsPrimaryId {
 		return true
 	}
 
@@ -514,7 +514,6 @@ func addUserID(e *Entity, packets *packet.Reader, pkt *packet.UserId) error {
 			sig.SigType != packet.SigTypeCertificationRevocation {
 			return errors.StructuralError("user ID signature with wrong type")
 		}
-
 
 		if sig.CheckKeyIdOrFingerprint(e.PrimaryKey) {
 			if err = e.PrimaryKey.VerifyUserIdSignature(pkt.Id, e.PrimaryKey, sig); err != nil {
