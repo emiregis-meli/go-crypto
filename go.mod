@@ -1,4 +1,4 @@
-module github.com/ProtonMail/go-crypto
+module github.com/emiregis-meli/go-crypto
 
 go 1.13
 
